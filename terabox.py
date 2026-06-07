@@ -172,7 +172,7 @@ async def handle_message(client: Client, message: Message):
         return
 
     encoded_url = urllib.parse.quote(url)
-    final_url = f"https://proxydll.noo4.workers.dev/?url={encoded_url}"
+    final_url = "https://api.sonzaix.indevs.in/terabox?url=${encodeURIComponent(teraboxUrl)}"
 
     download = aria2.add_uris([final_url])
     status_message = await message.reply_text("sᴇɴᴅɪɴɢ ʏᴏᴜ ᴛʜᴇ ᴍᴇᴅɪᴀ...🤤")
