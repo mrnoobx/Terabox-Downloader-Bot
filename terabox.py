@@ -172,9 +172,9 @@ async def handle_message(client: Client, message: Message):
         return
 
     encoded_url = urllib.parse.quote(url)
-    final_url = "https://api.sonzaix.indevs.in/terabox?url=${encodeURIComponent(teraboxUrl)}"
+    api_url = f"https://api.sonzaix.indevs.in/terabox?url={urllib.parse.quote(url)}"
 
-    download = aria2.add_uris([final_url])
+    download = aria2.add_uris([api_url])
     status_message = await message.reply_text("sᴇɴᴅɪɴɢ ʏᴏᴜ ᴛʜᴇ ᴍᴇᴅɪᴀ...🤤")
 
     start_time = datetime.now()
